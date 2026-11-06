@@ -1,6 +1,6 @@
-import { weatherIcon } from "../modules/assets.js";
+import { weatherIcon } from '../modules/assets.js';
 
-function createForecastSection (data, moment, degreeSymbol) {
+function createForecastSection(data, moment, degreeSymbol) {
     const thirdDiv = document.createElement('div');
     thirdDiv.classList.add('third-div');
 
@@ -9,18 +9,17 @@ function createForecastSection (data, moment, degreeSymbol) {
     thirdDiv.appendChild(forecastHeading);
 
     const forecastDivContainer = document.createElement('div');
-    forecastDivContainer.classList.add('forecast-div-container'); 
+    forecastDivContainer.classList.add('forecast-div-container');
 
     data.days.forEach((day, index) => {
-        if (index >= 5)
-            return;
+        if (index >= 5) return;
 
         const forecastDiv = document.createElement('div');
         forecastDiv.classList.add('forecast-div');
 
-        const date = new Date(day.datetime + "T00:00:00");
+        const date = new Date(day.datetime + 'T00:00:00');
         const formattedDate = date.toLocaleDateString('en-US', {
-             weekday: 'long',
+            weekday: 'long',
         });
         const datePara = document.createElement('p');
         datePara.textContent = formattedDate;
@@ -43,7 +42,7 @@ function createForecastSection (data, moment, degreeSymbol) {
 
     thirdDiv.appendChild(forecastDivContainer);
 
-    return thirdDiv
+    return thirdDiv;
 }
 
-export { createForecastSection }
+export { createForecastSection };

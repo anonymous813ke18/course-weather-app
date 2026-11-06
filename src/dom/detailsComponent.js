@@ -1,6 +1,6 @@
-import { weatherDetailIcons } from "../modules/assets.js";
+import { weatherDetailIcons } from '../modules/assets.js';
 
-function createDetailsSection (data, degreeSymbol, speedUnit) {
+function createDetailsSection(data, degreeSymbol, speedUnit) {
     const secondDiv = document.createElement('div');
     secondDiv.classList.add('second-div');
 
@@ -16,12 +16,13 @@ function createDetailsSection (data, degreeSymbol, speedUnit) {
     thermalSensationSvg.src = weatherDetailIcons['thermometerSvg'];
     thermalSensation.appendChild(thermalSensationSvg);
 
-    const thermalSensationPara1 = document.createElement('p')
+    const thermalSensationPara1 = document.createElement('p');
     thermalSensationPara1.textContent = 'Thermal Sensation:';
     thermalSensation.appendChild(thermalSensationPara1);
 
     const thermalSensationPara2 = document.createElement('p');
-    thermalSensationPara2.textContent = data.days[0].feelslike + ' ' + degreeSymbol;
+    thermalSensationPara2.textContent =
+        data.days[0].feelslike + ' ' + degreeSymbol;
     thermalSensation.appendChild(thermalSensationPara2);
 
     secondDiv.appendChild(thermalSensation);
@@ -33,14 +34,14 @@ function createDetailsSection (data, degreeSymbol, speedUnit) {
     rainProbabilitySvg.src = weatherDetailIcons['cloudSvg'];
     rainProbability.appendChild(rainProbabilitySvg);
 
-    const rainProbabilityPara1 = document.createElement('p')
+    const rainProbabilityPara1 = document.createElement('p');
     rainProbabilityPara1.textContent = 'Rain Probability:';
     rainProbability.appendChild(rainProbabilityPara1);
 
     const rainProbabilityPara2 = document.createElement('p');
     rainProbabilityPara2.textContent = data.days[0].precipprob + ' %';
     rainProbability.appendChild(rainProbabilityPara2);
-    
+
     secondDiv.appendChild(rainProbability);
 
     const windSpeed = document.createElement('div');
@@ -50,7 +51,7 @@ function createDetailsSection (data, degreeSymbol, speedUnit) {
     windSpeedSvg.src = weatherDetailIcons['windSvg'];
     windSpeed.appendChild(windSpeedSvg);
 
-    const windSpeedPara1 = document.createElement('p')
+    const windSpeedPara1 = document.createElement('p');
     windSpeedPara1.textContent = 'Wind Speed:';
     windSpeed.appendChild(windSpeedPara1);
 
@@ -67,7 +68,7 @@ function createDetailsSection (data, degreeSymbol, speedUnit) {
     airHumiditySvg.src = weatherDetailIcons['dropSvg'];
     airHumidity.appendChild(airHumiditySvg);
 
-    const airHumidityPara1 = document.createElement('p')
+    const airHumidityPara1 = document.createElement('p');
     airHumidityPara1.textContent = 'Air Humidity:';
     airHumidity.appendChild(airHumidityPara1);
 
@@ -84,7 +85,7 @@ function createDetailsSection (data, degreeSymbol, speedUnit) {
     pressureSvg.src = weatherDetailIcons['sunSvg'];
     pressure.appendChild(pressureSvg);
 
-    const pressurePara1 = document.createElement('p')
+    const pressurePara1 = document.createElement('p');
     pressurePara1.textContent = 'Pressure:';
     pressure.appendChild(pressurePara1);
 
@@ -93,8 +94,8 @@ function createDetailsSection (data, degreeSymbol, speedUnit) {
     pressure.appendChild(pressurePara2);
 
     secondDiv.appendChild(pressure);
-    
-    return secondDiv
+
+    return secondDiv;
 }
 
-export { createDetailsSection }
+export { createDetailsSection };

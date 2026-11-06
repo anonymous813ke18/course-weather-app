@@ -1,6 +1,6 @@
-import { weatherBgImage, weatherIcon } from "../modules/assets.js";
+import { weatherBgImage, weatherIcon } from '../modules/assets.js';
 
-function createCurrentWeatherSection (moment, data, degreeSymbol) {
+function createCurrentWeatherSection(moment, data, degreeSymbol) {
     const weather = data.days[0].conditions.split(',')[0];
 
     const firstDiv = document.createElement('div');
@@ -22,13 +22,13 @@ function createCurrentWeatherSection (moment, data, degreeSymbol) {
     firstDiv.appendChild(location);
 
     // Displaying the current date
-    const date = new Date(data.days[0].datetime + "T00:00:00");
+    const date = new Date(data.days[0].datetime + 'T00:00:00');
     const formattedDate = date.toLocaleDateString('en-US', {
-         weekday: 'long',
-         month: 'long',
-         day: 'numeric',
-         year: 'numeric',
-    })
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+    });
 
     const datePara = document.createElement('p');
     datePara.textContent = formattedDate;
@@ -47,7 +47,7 @@ function createCurrentWeatherSection (moment, data, degreeSymbol) {
     conditionImg.src = weatherIcon[moment][weather];
     firstDiv.appendChild(conditionImg);
 
-    return firstDiv
+    return firstDiv;
 }
 
-export { createCurrentWeatherSection }
+export { createCurrentWeatherSection };

@@ -27,37 +27,37 @@ import weatherSMomentDIcon from '../images/icons/Weather=Snow, Moment=Day.svg';
 
 const weatherBgImage = {
     day: {
-        'Clear': weatherClearMomentDay,
+        Clear: weatherClearMomentDay,
         'Partially cloudy': weatherFewCloudsMomentDay,
-        'Overcast': weatherCloudyMomentDay,
-        'Rain': weatherRainMomentDay,
-        'Snow': weatherSnowMomentDay,
+        Overcast: weatherCloudyMomentDay,
+        Rain: weatherRainMomentDay,
+        Snow: weatherSnowMomentDay,
     },
     night: {
-        'Clear': weatherClearMomentNight,
+        Clear: weatherClearMomentNight,
         'Partially cloudy': weatherFewCloudsMomentNight,
-        'Overcast': weatherCloudyMomentNight,
-        'Rain': weatherRainMomentNight,
-        'Snow': weatherSnowMomentNight,
-    }
-}
+        Overcast: weatherCloudyMomentNight,
+        Rain: weatherRainMomentNight,
+        Snow: weatherSnowMomentNight,
+    },
+};
 
 const weatherIcon = {
     day: {
-        'Clear': weatherCMomentDIcon,
+        Clear: weatherCMomentDIcon,
         'Partially cloudy': weatherFCMomentDIcon,
-        'Overcast': weatherClMomentDIcon,
-        'Rain': weatherRMomentDIcon,
-        'Snow': weatherSMomentDIcon,
+        Overcast: weatherClMomentDIcon,
+        Rain: weatherRMomentDIcon,
+        Snow: weatherSMomentDIcon,
     },
     night: {
-        'Clear': weatherCMomentNIcon,
+        Clear: weatherCMomentNIcon,
         'Partially cloudy': weatherFCMomentNIcon,
-        'Overcast': weatherClMomentNIcon,
-        'Rain': weatherRMomentNIcon,
-        'Snow': weatherSMomentDIcon,
-    }
-}
+        Overcast: weatherClMomentNIcon,
+        Rain: weatherRMomentNIcon,
+        Snow: weatherSMomentDIcon,
+    },
+};
 
 const weatherDetailIcons = {
     thermometerSvg: thermometerSvg,
@@ -65,6 +65,6 @@ const weatherDetailIcons = {
     dropSvg: dropSvg,
     sunSvg: sunSvg,
     windSvg: windSvg,
-}
+};
 
-export { weatherBgImage, weatherIcon, weatherDetailIcons }
+export { weatherBgImage, weatherIcon, weatherDetailIcons };
